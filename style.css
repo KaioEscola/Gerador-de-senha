@@ -93,14 +93,14 @@ body{
 
 .titulo-container {
     display: flex;
-    align-items: center;     /* Alinha verticalmente no meio */
-    justify-content: center;  /* Centraliza o bloco na tela */
-    gap: 16px;               /* Dá um espaço de 16px entre a imagem e o texto */
-    margin-bottom: 12px;     /* Empurra o subtítulo um pouco para baixo */
+    flex-direction: row-reverse; /* Inverte a ordem: o texto fica na esquerda e a imagem na direita */
+    align-items: center;         /* Mantém os dois alinhados no meio verticalmente */
+    justify-content: center;     /* Mantém o bloco todo centralizado na tela */
+    gap: 16px;                   /* Espaço entre o texto e o cadeado */
+    margin-bottom: 12px;
 }
 
-/* Opcional: Garante que a imagem não fique gigante se o arquivo original for grande */
 .titulo-container img {
-    height: 36px;            /* Ajuste o tamanho da imagem como preferir */
+    height: 36px;                /* Ajuste o tamanho do cadeado se precisar */
     width: auto;
 }
