@@ -104,3 +104,37 @@ body{
     height: 36px;                /* Ajuste o tamanho do cadeado se precisar */
     width: auto;
 }
+/* --- AJUSTES PARA O BONECO --- */
+
+/* Torna o título o ponto de referência para o posicionamento do boneco */
+.conteudo-titulo {
+    position: relative;
+}
+
+/* Posiciona o boneco exatamente como na imagem 1 */
+.boneco {
+    position: absolute;
+    top: -40px;          /* Ajusta a altura dele para subir perto do topo */
+    right: 250px;        /* Empurra ele para o lado direito da tela */
+    height: 300px;       /* Controla o tamanho do boneco */
+    width: auto;
+    z-index: 10;         /* Garante que ele fique acima do fundo */
+}
+
+/* Ajuste opcional: se a tela for menor, evita que o boneco esmague o texto */
+@media screen and (max-width: 1024px) {
+    .boneco {
+        right: 50px;
+        height: 200px;
+        top: -20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .boneco {
+        position: static; /* No celular, ele volta para o fluxo normal abaixo do texto */
+        margin: 20px auto 0 auto;
+        display: block;
+        height: 150px;
+    }
+}
