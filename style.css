@@ -107,35 +107,30 @@ body{
 }
 
 /* --- CONFIGURAÇÃO DO BONECO --- */
+/* Telas Grandes (Desktop) */
 .boneco {
-    position: absolute !important;
-    top: -40px !important;
-    right: 250px !important;
-    height: 300px !important;
-    width: auto !important;
-    z-index: 999 !important;
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  height: 300px !important;
+  width: auto !important;
+  z-index: 999 !important;
 }
 
-/* Ajustes de responsividade para telas menores */
-@media screen and (max-width: 1200px) {
-    .boneco {
-        right: 100px !important;
-    }
-}
-
+/* Telas Médias (Tablets) */
 @media screen and (max-width: 900px) {
-    .boneco {
-        right: 20px !important;
-        height: 230px !important;
-        top: -10px !important;
-    }
+  .boneco {
+    height: 230px !important;
+    bottom: 10px !important;
+    right: 10px !important;
+  }
 }
 
+/* Telas Pequenas (Celulares) */
 @media screen and (max-width: 768px) {
-    .boneco {
-        position: static !important;
-        margin: 20px auto 0 auto !important;
-        display: block !important;
-        height: 180px !important;
-    }
+  .boneco {
+    height: 180px !important;
+    bottom: 5px !important;
+    right: 5px !important;
+  }
 }
