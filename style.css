@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
 
-:root{
+:root {
     --branco: rgb(224, 224, 224);
     --cor-de-fundo: #022f5f;
     --fundo-senha: #00244D;
@@ -9,40 +9,45 @@
     --roboto: 'Roboto', sans-serif;
     --roboto-mono: 'Roboto Mono', monospace;
 }
-*{
+
+/* CORREÇÃO: Aplicando a fonte no * para garantir que ela seja aplicada globalmente */
+* {
+    font-family: var(--roboto);
     font-weight: 400;
+    box-sizing: border-box; /* Adicionado para facilitar o cálculo de larguras */
+    margin: 0;
+    padding: 0;
 }
 
-body{
+body {
     color: var(--branco);
     background-color: var(--cor-de-fundo);
-    font-family: var(--roboto);
 }
 
-.titulo-principal{
+.titulo-principal {
     font-family: var(--roboto-mono);
     font-size: 32px;
 }
 
-.titulo-secundario{
+.titulo-secundario {
     font-size: 24px;
 }
 
 /* Modificado para servir de referência ao boneco */
-.conteudo-titulo{
+.conteudo-titulo {
     text-align: center;
     margin-top: 80px;
     position: relative !important;
 }
 
-.conteudo-senha{
+.conteudo-senha {
     margin-top: 80px; 
     background: var(--fundo-senha);
     padding: 24px;
     border-bottom: 6px solid var(--borda);
 }
 
-#campo-senha{
+#campo-senha {
     background-color: var(--fundo-senha);
     border: none;
     color: var(--branco);
@@ -51,43 +56,44 @@ body{
     width: 70%;
 }
 
-#campo-senha:focus{
+#campo-senha:focus {
     outline: none;
 }
 
-.conteudo{
+.conteudo {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.parametro{
+.parametro {
     background-color: var(--fundo-texto);
     border: 2px solid var(--borda);
     margin-top: 32px;
     padding: 24px;
 }
 
-.parametro-titulo{
+.parametro-titulo {
     font-family: var(--roboto-mono);
     font-size: 28px;
 }
 
-.parametro-senha__titulo{
-    font-size:24px;
+.parametro-senha__titulo {
+    font-size: 24px;
 }
 
-.parametro-coluna__senha{
+.parametro-coluna__senha {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.parametro-senha{
+
+.parametro-senha {
     width: 50%;
     margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
-    .parametro-coluna__senha{
+    .parametro-coluna__senha {
         flex-direction: row;
     }
 }
@@ -107,45 +113,7 @@ body{
 }
 
 /* --- CONFIGURAÇÃO DO BONECO --- */
-/* Telas Grandes (Desktop) */
-.boneco {
-  position: fixed !important;
-  bottom: 20px !important;
-  right: 20px !important;
-  height: 300px !important;
-  width: auto !important;
-  z-index: 999 !important;
-}
-
-/* Telas Médias (Tablets) */
-@media screen and (max-width: 900px) {
-  .boneco {
-    height: 230px !important;
-    bottom: 10px !important;
-    right: 10px !important;
-  }
-}
-
-/* Telas Pequenas (Celulares) */
-@media screen and (max-width: 768px) {
-  .boneco {
-    height: 180px !important;
-    bottom: 5px !important;
-    right: 5px !important;
-  }
-}
-.parametro-senha__botao{
-    background-color: var(--fundo-texto);
-    color: var(--branco);
-    border: 2px solid var(--borda);
-    padding: 24px;
-    font-size: 24px;
-}
-.parametro-senha__botao{
-    background-color: var(--fundo-texto);
-    color: var(--branco);
-    border: 2px solid var(--borda);
-    padding: 24px;
-    font-size: 24px;
-    cursor: pointer;
+/* Exemplo de continuação para telas grandes */
+@media screen and (min-width: 1024px) {
+    /* Ajuste o boneco aqui */
 }
