@@ -9,6 +9,7 @@
     --roboto: 'Roboto', sans-serif;
     --roboto-mono: 'Roboto Mono', monospace;
 }
+
 *{
     font-weight: 400;
 }
@@ -73,7 +74,7 @@ body{
 }
 
 .parametro-senha__titulo{
-    font-size:24px;
+    font-size: 24px;
 }
 
 .parametro-coluna__senha{
@@ -81,6 +82,7 @@ body{
     flex-direction: column;
     justify-content: center;
 }
+
 .parametro-senha{
     width: 50%;
     margin: 0 auto;
@@ -134,13 +136,8 @@ body{
     right: 5px !important;
   }
 }
-.parametro-senha__botao{
-    background-color: var(--fundo-texto);
-    color: var(--branco);
-    border: 2px solid var(--borda);
-    padding: 24px;
-    font-size: 24px;
-}
+
+/* --- CONFIGURAÇÃO DOS BOTÕES --- */
 .parametro-senha__botao{
     background-color: var(--fundo-texto);
     color: var(--branco);
@@ -149,45 +146,51 @@ body{
     font-size: 24px;
     cursor: pointer;
 }
+
 .parametro-senha-botoes{
     display: flex;
     justify-content: center;
 }
-.parametro-senha__botao{
-    background-color: var(--fundo-texto);
-    color: var(--branco);
-    border: 2px solid var(--borda);
-    padding: 24px;
-    font-size: 24px;
-}
-.parametro-senha__botao{
-    background-color: var(--fundo-texto);
-    color: var(--branco);
-    border: 2px solid var(--borda);
-    padding: 24px;
-    font-size: 24px;
+
+.checkbox{
+    width: 20px;
+    height: 20px;
     cursor: pointer;
 }
-<div class="parametro-senha">{
-    <h4 class="parametro-senha__titulo">Características da senha</h4>
-    <div class="parametro-senha-checkbox">
-        <input name="maiusculo" type="checkbox" checked>
-        <label for="maiusculo">Letras maiúsculas</label>
-    </div>
-    <div class="parametro-senha-checkbox">
-        <input name="minusculo" type="checkbox">
-        <label for="minusculo">Letras minúsculas</label>
-    </div>
-    <div class="parametro-senha-checkbox">
-        <input name="numero" type="checkbox">
-        <label for="numero">Números</label>
-    </div>
-    <div class="parametro-senha-checkbox">
-    <input name="simbolo" type="checkbox">
-        <label for="simbolo">Símbolos</label>
-    </div>
-</div>
-}
+
 label{
     font-size: 20px;
+}
+
+/* --- ADICIONADO: FORÇA DA SENHA --- */
+.barra{
+    background-color: var(--fundo-senha);
+    height: 30px;
+    width: 100%;
+}
+
+.forca{
+    height: 30px;
+    position: relative;
+    bottom: 30px;
+}
+
+.fraca{
+    width: 25%;
+    background-color: #E71B32; 
+}
+
+.media{
+    background-color: #FAF408;
+    width: 50%;
+}
+
+.forte{
+    background-color: #00FF85;
+    width: 100%;
+}
+
+.parametro-senha-textos{
+    display: flex;
+    justify-content: space-between;
 }
